@@ -48,6 +48,14 @@ function search(query){
 	query.concat("&f_apply=Apply+Filter");
 	break;
 
+	     case "-m":
+            query = query.substr(3);
+            window.location = 
+    	"https://mangasee123.com/search/?name=" + 
+    	query.replaceChars("+", "%2B");
+    	break;
+	
+
         default:
             window.location="https://www.google.com/search?q=" +
                 query.replaceChars("", "+");
