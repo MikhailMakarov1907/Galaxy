@@ -54,7 +54,13 @@ function search(query){
     	"https://mangasee123.com/search/?name=" + 
     	query.replaceChars("+", "%2B");
     	break;
-	
+		
+		case "-h":
+            query = query.substr(3);
+            window.location = "https://hitomi.la/search.html?" +
+            query.replaceChars(" ", "+");
+            break;
+
 
         default:
             window.location="https://www.google.com/search?q=" +
